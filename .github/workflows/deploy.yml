@@ -53,4 +53,6 @@ jobs:
             docker rm spring-app || true
             docker run -d -p 8080:8080 \
               --name spring-app \
+              -e DB_USERNAME=${{ secrets.DB_USERNAME }} \
+              -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
               ${{ secrets.DOCKER_USERNAME }}/spring-app:latest

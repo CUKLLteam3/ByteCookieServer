@@ -3,19 +3,21 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
-
-  h2:
-    console:
-      enabled: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-2.cxaicagyu6ru.ap-northeast-2.rds.amazonaws.com:3306/bytecookie
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
 
 springdoc:
   swagger-ui:
@@ -24,6 +26,4 @@ springdoc:
     enabled: true
   default-produces-media-type: application/json
   default-consumes-media-type: application/json
-  # ⚠️ Swagger UI 상단 Servers 드롭다운의 기본 주소 지정
-  # 여기를 https로 명확히 해줘야 브라우저가 차단하지 않음
   server-url: https://api-bytecookie.click
