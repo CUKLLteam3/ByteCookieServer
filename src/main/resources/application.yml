@@ -16,3 +16,14 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+springdoc:
+  swagger-ui:
+    display-request-duration: true
+  api-docs:
+    enabled: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  # ⚠️ Swagger UI 상단 Servers 드롭다운의 기본 주소 지정
+  # 여기를 https로 명확히 해줘야 브라우저가 차단하지 않음
+  server-url: https://api-bytecookie.click
