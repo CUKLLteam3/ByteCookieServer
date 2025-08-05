@@ -22,6 +22,9 @@ recruit:
   api:
     key: ${RECRUIT_API_KEY}
 
+openai:
+  api-key: ${OPENAI_API_KEY}
+
 
 springdoc:
   swagger-ui:
