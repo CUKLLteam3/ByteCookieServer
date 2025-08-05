@@ -36,7 +36,7 @@ public class OpenAiService {
      * @return ChatGPT의 응답 텍스트
      */
     // 1. 메시지 리스트 생성
-    List<Map<String, String>> messages = new ArrayList<>();
+    //List<Map<String, String>> messages = new ArrayList<>();
     String severPromt = new String();
 
     public String jobAi(String userMessage) {
@@ -54,6 +54,7 @@ public class OpenAiService {
 
 
     public String askChatGPT(String userMessage, String severPromt) {
+        List<Map<String, String>> messages = new ArrayList<>();
 
 
         // 2. system 메시지 추가
