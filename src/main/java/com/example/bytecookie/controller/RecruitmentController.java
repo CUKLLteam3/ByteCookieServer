@@ -50,5 +50,11 @@ public class RecruitmentController {
         return recruitmentService.getRecruitmentwantList(request);
     }
 
+    // 저장
+
+    // 조회
+
+    // 삭제
+
 }
 
