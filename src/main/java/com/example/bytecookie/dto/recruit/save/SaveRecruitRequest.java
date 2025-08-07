@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Data
+
 public class SaveRecruitRequest {
     private Long userId;
     private Long sn;
