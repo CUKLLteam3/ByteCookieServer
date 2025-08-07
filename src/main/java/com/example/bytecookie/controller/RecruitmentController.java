@@ -50,15 +50,5 @@ public class RecruitmentController {
         return recruitmentService.getRecruitmentwantList(request);
     }
 
-    @PostMapping("/recommend")
-    public List<ScoredRecruitmentItem> recommendJobs(@RequestBody RecruitmentSearchRequest request) {
-        log.info("🔍 요청 들어온 바디: {}", request);
-        return recruitmentService.getRecommendedRecruitments(
-                request.getNcsCdLst(),
-                request.getWorkRgnLst(),
-                request.getHireTypeLst(),
-                request.getRecrutSe()
-        );
-    }
 }
 
