@@ -40,11 +40,11 @@ public class OpenAiService {
     String severPromt = new String();
 
     public String jobAi(String userMessage) {
-        severPromt = "뒤에 올 내용을 바탕으로 이 사람한테 어울리는 직업을 추천해줘. 추천할 직업명만 딱 주면 되.";
+        severPromt = "#뒤에 올 내용을 바탕으로 이 사람한테 어울리는 직업을 추천해주고 그 이유를 알려줘. #넌 대답할 때 이런 형식에 맞게 줘야해. \"추천할 직업명은 이거야. 추천하는 이유는 이거야.\" ";
         return askChatGPT(userMessage, severPromt);
     }
     public String resumeAi(String userMessage) {
-        severPromt = "뒤에 올 이력서에서 수정할 부분을 알려줘 한 3가지 정도면 충분해. 출력할 때 저는 이 부분을 이렇게 바꾸길 추천드립니다. 이런식으로! ";
+        severPromt = "#넌 자기소개서 첨삭 전문가야. #뒤에 적힌 자기소개서를 보고 니가 첨삭한 후 업그레이드본을 보여줘. #업그레이드 할 때는 기승전결을 고려해서 어떤 일을 통해 나는 어떤 변화를 얻었고, 이를 통해 나는 어떤 사람인지와 어떤 역량을 가졌는지 나타나면 좋을 것 같아. #최종적으로 300자 이상,500자 이내로 부탁할게. # 다른 말 없이 그냥 업데이트된 글만 보여줘야해. 이렇게 추천한다는 등 이런 말 쓰지 마.";
         return askChatGPT(userMessage, severPromt);
     }
 
@@ -77,8 +77,8 @@ public class OpenAiService {
                 "gpt-3.5-turbo",  // 사용 모델 이름: gpt-3.5-turbo 또는 gpt-4o
                 //List.of(Map.of("role", "user", "content", userMessage)), // ✅ 필수 포맷: role + content
                 messages,
-                0.7, // 생성 다양성 조절 (0 ~ 1, 높을수록 창의적)
-                400
+                0.9, // 생성 다양성 조절 (0 ~ 1, 높을수록 창의적)
+                1000
         );
 
 
