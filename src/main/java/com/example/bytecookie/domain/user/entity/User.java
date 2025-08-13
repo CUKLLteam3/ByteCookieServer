@@ -1,6 +1,7 @@
 package com.example.bytecookie.domain.user.entity;
 
 import com.example.bytecookie.domain.recruit.entity.SavedRecruit;
+import com.example.bytecookie.domain.resume.entity.Resume;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +26,9 @@ public class User {
 
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
     private List<SavedRecruit> savedRecruits;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Resume resume;
 
 
 
