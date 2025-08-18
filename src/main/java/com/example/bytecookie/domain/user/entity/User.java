@@ -35,6 +35,12 @@ public class User {
     @Column(name = "nickname",nullable = false, length = 50)
     private String nickname;
 
+    @Column(name = "age_group")
+    private String ageGroup;
+
+    @Column(name = "region")
+    private String region;
+
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 

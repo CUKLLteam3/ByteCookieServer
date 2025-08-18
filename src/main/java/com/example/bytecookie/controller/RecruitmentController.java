@@ -86,6 +86,8 @@ public class RecruitmentController {
     ) {
         User user = new User();
         user.setNickname(nickname);
+        user.setAgeGroup(ageGroup);
+        user.setRegion(region);
         user.setCreatedAt(LocalDateTime.now());
         user.setUpdatedAt(LocalDateTime.now());
 
