@@ -17,15 +17,6 @@ openai:
 
 
 
-jpa:
-  hibernate:
-    ddl-auto: update
-  show-sql: true
-  properties:
-      ibernate:
-      format_sql: true
-
-
 
 springdoc:
   swagger-ui:
@@ -35,3 +26,11 @@ springdoc:
   default-produces-media-type: application/json
   default-consumes-media-type: application/json
   server-url: https://api-bytecookie.click
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  properties:
+    ibernate:
+    format_sql: true
