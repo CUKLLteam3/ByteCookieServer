@@ -2,7 +2,7 @@ package com.example.bytecookie.controller;
 
 import com.example.bytecookie.domain.recruit.service.SavedRecruitService;
 import com.example.bytecookie.domain.user.entity.User;
-import com.example.bytecookie.domain.user.repository.UserRepository;
+import com.example.bytecookie.domain.login.repository.UserRepository;
 import com.example.bytecookie.dto.recruit.detail.RecruitmentDetailResponse;
 import com.example.bytecookie.dto.recruit.list.RecruitmentItem;
 import com.example.bytecookie.domain.recruit.service.RecruitmentService;

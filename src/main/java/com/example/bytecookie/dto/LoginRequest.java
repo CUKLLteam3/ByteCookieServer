@@ -1,4 +1,4 @@
-package com.example.login.dto;
+package com.example.bytecookie.dto;
 
 import lombok.Getter;
 import lombok.Setter;

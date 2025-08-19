@@ -1,9 +1,9 @@
-package com.example.login.controller;
+package com.example.bytecookie.controller;
 
-import com.example.login.dto.UserResponseDto;
-import com.example.login.dto.UserUpdateDto;
-import com.example.login.jwt.JwtUtil;
-import com.example.login.service.UserService;
+import com.example.bytecookie.dto.UserResponseDto;
+import com.example.bytecookie.dto.UserUpdateDto;
+import com.example.bytecookie.domain.login.jwt.JwtUtil;
+import com.example.bytecookie.domain.login.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

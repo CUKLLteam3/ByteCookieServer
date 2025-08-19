@@ -1,8 +1,8 @@
-package com.example.login.controller;
+package com.example.bytecookie.controller;
 
-import com.example.login.dto.SignupRequest;
-import com.example.login.dto.LoginRequest;
-import com.example.login.service.AuthService;
+import com.example.bytecookie.dto.SignupRequest;
+import com.example.bytecookie.dto.LoginRequest;
+import com.example.bytecookie.domain.login.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.example.login.repository;
+package com.example.bytecookie.domain.login.repository;
 
-import com.example.login.entity.User;
+import com.example.bytecookie.domain.login.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

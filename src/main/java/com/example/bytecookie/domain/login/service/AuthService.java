@@ -1,10 +1,10 @@
-package com.example.login.service;
+package com.example.bytecookie.domain.login.service;
 
-import com.example.login.dto.SignupRequest;
-import com.example.login.dto.LoginRequest;
-import com.example.login.entity.User;
-import com.example.login.repository.UserRepository;
-import com.example.login.jwt.JwtUtil;
+import com.example.bytecookie.dto.SignupRequest;
+import com.example.bytecookie.dto.LoginRequest;
+import com.example.bytecookie.domain.login.entity.User;
+import com.example.bytecookie.domain.login.repository.UserRepository;
+import com.example.bytecookie.domain.login.jwt.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

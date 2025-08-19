@@ -1,4 +1,4 @@
-package com.example.login.jwt;
+package com.example.bytecookie.domain.login.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

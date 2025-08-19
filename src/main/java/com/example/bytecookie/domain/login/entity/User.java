@@ -1,4 +1,4 @@
-package com.example.login.entity;
+package com.example.bytecookie.domain.login.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

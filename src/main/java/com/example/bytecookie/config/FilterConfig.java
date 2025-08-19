@@ -1,6 +1,6 @@
-package com.example.login.config;
+package com.example.bytecookie.config;
 
-import com.example.login.jwt.JwtFilter;
+import com.example.bytecookie.domain.login.jwt.JwtFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

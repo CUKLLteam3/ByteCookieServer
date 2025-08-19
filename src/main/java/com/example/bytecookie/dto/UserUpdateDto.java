@@ -1,6 +1,6 @@
-package com.example.login.dto;
+package com.example.bytecookie.dto;
 
-import com.example.login.entity.User;
+import com.example.bytecookie.domain.login.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
