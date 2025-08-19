@@ -1,4 +1,4 @@
-package com.example.bytecookie.Controller;
+package com.example.bytecookie.controller;
 
 import com.example.bytecookie.domain.mypage.MypageService;
 import lombok.RequiredArgsConstructor;

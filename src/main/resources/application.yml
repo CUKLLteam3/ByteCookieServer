@@ -17,8 +17,25 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update   # ????: create / update / validate ?? ??
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+
+recruit:
+  api:
+    key: ${RECRUIT_API_KEY}
+
+openai:
+  api-key: ${OPENAI_API_KEY}
+
+
+springdoc:
+  swagger-ui:
+    display-request-duration: true
+  api-docs:
+    enabled: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  server-url: https://api-bytecookie.click
