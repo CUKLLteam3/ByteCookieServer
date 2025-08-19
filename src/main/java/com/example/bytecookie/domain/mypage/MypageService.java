@@ -18,7 +18,7 @@ public class MypageService {
     private final EducationQueryService educationQueryService;
 
     public Object getSaved(Long userId, String expand, Integer limit) {
-        // 1) DB에서 내가 찜한 id 리스트
+        // 1) DB에서 내가 찜한 id 리스트 ..
         List<String> ids = savedEducationService.getSavedEducationIds(userId);
         if (limit != null && limit > 0 && limit < ids.size()) {
             ids = ids.subList(0, limit);
