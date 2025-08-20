@@ -25,6 +25,13 @@ recruit:
 openai:
   api-key: ${OPENAI_API_KEY}
 
+  hrd:
+    base-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do
+    detail-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do
+    keys:
+      card: 7ec31f6c-6456-4b16-ae82-6d802051bdd5
+      apprentice: f39accaa-be41-4c63-b5f1-9aea59af47a2
+
 
 springdoc:
   swagger-ui:
@@ -33,4 +40,4 @@ springdoc:
     enabled: true
   default-produces-media-type: application/json
   default-consumes-media-type: application/json
-  server-url: https://api-bytecookie.click
+  server-url: https://api-bytecookie.click/
