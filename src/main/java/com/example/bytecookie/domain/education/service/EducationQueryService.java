@@ -22,9 +22,9 @@ public class EducationQueryService {
             new HashSet<>(Arrays.asList("11", "41", "28"));
 
     // 환경변수에서 주입
-    @Value("${hrd.keys.card:}")
+    @Value("7ec31f6c-6456-4b16-ae82-6d802051bdd5")
     private String keyCard;
-    @Value("${hrd.keys.apprentice:}")
+    @Value("f39accaa-be41-4c63-b5f1-9aea59af47a2")
     private String keyApprentice;
 
     /**
