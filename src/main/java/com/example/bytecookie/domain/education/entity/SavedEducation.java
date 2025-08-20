@@ -1,6 +1,7 @@
 package com.example.bytecookie.domain.education.entity;
 
 
+import com.example.bytecookie.domain.user.entity.UserInfo;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,8 +18,10 @@ public class SavedEducation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
-    private Long userId;  // ← FK 대신 그냥 userId 필드만 사용
+    // FK: saved_education.user_id → user_info.id
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserInfo userInfo;
 
     @Column(name="education_id", nullable=false, length=100)
     private String educationId;

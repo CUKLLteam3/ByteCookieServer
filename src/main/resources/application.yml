@@ -3,15 +3,13 @@ hrd:
   base-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do
   detail-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do
   keys:
-    # ????????
-    card: 7ec31f6c-6456-4b16-ae82-6d802051bdd5
-    # ?????
-    apprentice: f39accaa-be41-4c63-b5f1-9aea59af47a2
+    card: ${KEY_CARD}
+    apprentice: ${KEY_APPRENTICE}
 
 spring:
   datasource:
     url: jdbc:mysql://database-2.cxaicagyu6ru.ap-northeast-2.rds.amazonaws.com:3306/bytecookie?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: dev_user_ho       # ???? ??
+    username: dev_user_ho       # 공용서버 계정
     password: StrongPass!23
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -39,3 +37,6 @@ springdoc:
   default-produces-media-type: application/json
   default-consumes-media-type: application/json
   server-url: https://api-bytecookie.click
+
+server:
+  port: 8080

@@ -18,30 +18,26 @@ public class MypageService {
     private final EducationQueryService educationQueryService;
 
     public Object getSaved(Long userId, String expand, Integer limit) {
-        // 1) DB에서 내가 찜한 id 리스트
         List<String> ids = savedEducationService.getSavedEducationIds(userId);
         if (limit != null && limit > 0 && limit < ids.size()) {
             ids = ids.subList(0, limit);
         }
 
-        // 2) expand에 따라 반환 형태 변경
         switch (expand == null ? "ids" : expand.toLowerCase()) {
             case "summary":
-                // 목록 카드용 최소 필드만 반환
                 return ids.stream()
                         .map(this::toSummarySafe)
-                        .filter(Objects::nonNull) // 실패한 것 제외
+                        .filter(Objects::nonNull)
                         .toList();
 
             case "detail":
-                // 상세 화면과 동일 DTO 반환
                 return ids.stream()
                         .map(this::toDetailSafe)
                         .filter(Objects::nonNull)
                         .toList();
 
-            default: // "ids"
-                return ids; // ["AIG2024...", ...]
+            default:
+                return ids;
         }
     }
 

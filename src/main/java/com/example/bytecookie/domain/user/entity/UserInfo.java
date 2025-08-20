@@ -1,11 +1,14 @@
 package com.example.bytecookie.domain.user.entity;
 
+import com.example.bytecookie.domain.education.entity.SavedEducation;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user_info")   // 공용 DB 테이블명
@@ -56,4 +59,8 @@ public class UserInfo {
     public enum Role {
         USER, ADMIN
     }
+
+    @OneToMany(mappedBy = "userInfo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<SavedEducation> savedEducations = new ArrayList<>();
+
 }
