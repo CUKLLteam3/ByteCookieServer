@@ -6,8 +6,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://database-2.cxaicagyu6ru.ap-northeast-2.rds.amazonaws.com:3306/bytecookie
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: dev_user_ho
+    password: StrongPass!23
     hikari:
       maximum-pool-size: 10
 
@@ -27,8 +27,6 @@ openai:
   api-key: ${OPENAI_API_KEY}
 
   hrd:
-    base-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do
-    detail-url: https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do
     keys:
       card: ${HRD_KEYS_CARD}
       apprentice: ${HRD_KEYS_APPRENTICE}
