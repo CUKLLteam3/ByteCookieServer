@@ -22,10 +22,10 @@ public class EducationQueryService {
             new HashSet<>(Arrays.asList("11", "41", "28"));
 
     // 환경변수에서 주입
-
-    private String keyCard = "7ec31f6c-6456-4b16-ae82-6d802051bdd5";
-    private String keyApprentice = "f39accaa-be41-4c63-b5f1-9aea59af47a2";
-
+    @Value("${HRD_KEYS_CARD}")
+    private String keyCard;
+    @Value("${HRD_KEYS_APPRENTICE}")
+    private String keyApprentice;
 
     /**
      * 목록 조회: 두 키(card+apprentice) 병합이 기본

@@ -16,10 +16,12 @@ public class HrdApiClient {
 
     private final RestTemplate restTemplate;
 
-    private String baseUrl = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do";
-    private String detailUrl = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do";
+    @Value("${hrd.base-url}")
+    private String baseUrl;
+    @Value("${hrd.detail-url}")
+    private String detailUrl;
 
-    /** dlrj
+    /**
      * 리스트 원문(JSON)으로 받음. 필터는 값 있을 때만 붙인다.
      */
     // ✅ 새 메서드: 어떤 인증키로 호출할지 외부에서 결정
