@@ -16,8 +16,8 @@ public class HrdApiClient {
 
     private final RestTemplate restTemplate;
 
-    @Value("https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do")   private String baseUrl;
-    @Value("https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do") private String detailUrl;
+    private String baseUrl = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do";
+    private String detailUrl = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do";
 
     /** dlrj
      * 리스트 원문(JSON)으로 받음. 필터는 값 있을 때만 붙인다.
