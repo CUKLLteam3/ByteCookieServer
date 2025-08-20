@@ -23,7 +23,7 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private UserInfo userInfo;
 
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
@@ -31,7 +31,6 @@ public class User {
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Resume resume;
-
 
 
     @Column(name = "nickname",nullable = false, length = 50)
