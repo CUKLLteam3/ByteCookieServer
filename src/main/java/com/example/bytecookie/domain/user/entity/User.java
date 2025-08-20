@@ -23,8 +23,6 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private UserInfo userInfo;
 
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
     private List<SavedRecruit> savedRecruits;
