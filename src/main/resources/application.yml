@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-2.cxaicagyu6ru.ap-northeast-2.rds.amazonaws.com:3306/bytecookie
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+recruit:
+  api:
+    key: ${RECRUIT_API_KEY}
+
+openai:
+  api-key: ${OPENAI_API_KEY}
+
+hrd:
+  base-url: ${HRD_BASE_URL:https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do}
+  detail-url: ${HRD_DETAIL_URL:https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do}
+  keys:
+    card: ${HRD_KEYS_CARD}
+    apprentice: ${HRD_KEYS_APPRENTICE}
+
+
+springdoc:
+  swagger-ui:
+    display-request-duration: true
+  api-docs:
+    enabled: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  server-url: https://api-bytecookie.click
