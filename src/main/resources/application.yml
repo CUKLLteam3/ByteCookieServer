@@ -1,6 +1,7 @@
 server:
   port: 8080
 
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,7 +13,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
@@ -24,6 +25,13 @@ recruit:
 
 openai:
   api-key: ${OPENAI_API_KEY}
+
+hrd:
+  base-url: ${HRD_BASE_URL:https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do}
+  detail-url: ${HRD_DETAIL_URL:https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310D01.do}
+  keys:
+    card: ${HRD_KEYS_CARD}
+    apprentice: ${HRD_KEYS_APPRENTICE}
 
 
 springdoc:
