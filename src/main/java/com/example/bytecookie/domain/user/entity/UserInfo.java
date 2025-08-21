@@ -21,6 +21,10 @@ public class UserInfo {
     @Column(name = "user_info_id")  // PK 이름 맞춤
     private Long id;
 
+    @OneToOne
+    @MapsId   // ✅ user_info_id = user.user_id 를 공유한다는 의미
+    @JoinColumn(name = "user_info_id") // FK 컬럼 = PK 컬럼
+    private User user;
 
     @Column(nullable = false, unique = true, length = 100)
     private String email;

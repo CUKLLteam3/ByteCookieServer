@@ -23,8 +23,12 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private UserInfo userInfo;
+
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
     private List<SavedRecruit> savedRecruits;
+
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Resume resume;
