@@ -57,6 +57,4 @@ jobs:
               -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
               -e RECRUIT_API_KEY=${{ secrets.RECRUIT_API_KEY }} \
               -e OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} \
-              -e HRD_KEYS_CARD=${{ secrets.HRD_KEYS_CARD }} \
-              -e HRD_KEYS_APPRENTICE=${{ secrets.HRD_KEYS_APPRENTICE }} \
               ${{ secrets.DOCKER_USERNAME }}/spring-app:latest
