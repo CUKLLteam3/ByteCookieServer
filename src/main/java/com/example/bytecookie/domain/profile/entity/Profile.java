@@ -1,6 +1,6 @@
 package com.example.bytecookie.domain.profile.entity;
 
-import com.example.bytecookie.domain.user.entity.User;
+import com.example.bytecookie.domain.user.entity.UserInfo;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,10 +19,10 @@ public class Profile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // FK
+    // FK: profile.user_info_id → user_info.user_info_id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "user_info_id", nullable = false)
+    private UserInfo userInfo;
 
     private String name;
     private Integer birthYear;
