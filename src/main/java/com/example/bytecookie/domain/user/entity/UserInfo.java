@@ -18,12 +18,9 @@ public class UserInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long id;   // PK
+    @Column(name = "user_info_id")  // PK 이름 맞춤
+    private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id", nullable = false, unique = true)
-    private User user;
 
     @Column(nullable = false, unique = true, length = 100)
     private String email;

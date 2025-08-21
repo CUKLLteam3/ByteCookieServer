@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "saved_education", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"user_id", "education_id"})
+        @UniqueConstraint(columnNames = {"user_info_id", "education_id"})
 })
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @Builder
@@ -18,9 +18,9 @@ public class SavedEducation {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // FK: saved_education.user_id → user_info.id
+    // FK: saved_education.user_info_id → user_info.user_info_id
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_info_id", nullable = false)
     private UserInfo userInfo;
 
     @Column(name="education_id", nullable=false, length=100)

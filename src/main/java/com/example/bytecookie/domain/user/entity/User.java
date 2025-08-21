@@ -23,15 +23,11 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private UserInfo userInfo;
-
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
     private List<SavedRecruit> savedRecruits;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Resume resume;
-
 
     @Column(name = "nickname",nullable = false, length = 50)
     private String nickname;
