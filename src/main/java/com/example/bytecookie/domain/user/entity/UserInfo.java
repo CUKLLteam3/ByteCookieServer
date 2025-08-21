@@ -1,5 +1,5 @@
 package com.example.bytecookie.domain.user.entity;
-
+/*
 import com.example.bytecookie.domain.education.entity.SavedEducation;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -65,4 +65,4 @@ public class UserInfo {
     @OneToMany(mappedBy = "userInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SavedEducation> savedEducations = new ArrayList<>();
 
-}
+}*/
