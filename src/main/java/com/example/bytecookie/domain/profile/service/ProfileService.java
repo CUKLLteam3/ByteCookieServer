@@ -2,12 +2,13 @@ package com.example.bytecookie.domain.profile.service;
 
 
 
-import com.example.bytecookie.domain.user.entity.UserInfo;
+
+import com.example.bytecookie.domain.user.entity.User;
 import com.example.bytecookie.dto.ProfileRequestDto;
 import com.example.bytecookie.dto.ProfileResponseDto;
 import com.example.bytecookie.domain.profile.entity.Profile;
 import com.example.bytecookie.domain.profile.repository.ProfileRepository;
-import com.example.bytecookie.domain.user.repository.UserInfoRepository;
+import com.example.bytecookie.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +19,18 @@ import java.util.Optional;
 public class ProfileService {
 
     private final ProfileRepository profileRepository;
-    private final UserInfoRepository userInfoRepository;
+    private final UserRepository userRepository;
 
     // 저장/수정
     public ProfileResponseDto saveProfile(Long userId, ProfileRequestDto dto) {
         // user_info 에 유저가 있어야 함
-        UserInfo user = userInfoRepository.findById(userId)
+        User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("해당 유저가 존재하지 않습니다. id=" + userId));
 
         // 프로필이 이미 있는지 확인
-        Optional<Profile> optionalProfile = profileRepository.findByUserInfo(user);
+        Optional<Profile> optionalProfile = profileRepository.findByUser(user);
         Profile profile = optionalProfile.orElseGet(() -> Profile.builder()
-                .userInfo(user)   // ✅ FK 객체로 설정
+                .user(user)   // ✅ FK 객체로 설정
                 .build());
 
         // 값 세팅
@@ -61,10 +62,10 @@ public class ProfileService {
 
     // 조회
     public ProfileResponseDto getProfile(Long userId) {
-        UserInfo user = userInfoRepository.findById(userId)
+        User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("해당 유저가 존재하지 않습니다. id=" + userId));
 
-        Profile profile = profileRepository.findByUserInfo(user)
+        Profile profile = profileRepository.findByUser(user)
                 .orElseThrow(() -> new RuntimeException("해당 유저의 프로필이 없습니다."));
         return toResponse(profile);
     }
