@@ -34,7 +34,7 @@ public class UserInfo {
     @Column(length = 20)
     private String phone;
 
-    private LocalDate birthdate;
+    private String birthdate;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 10)
