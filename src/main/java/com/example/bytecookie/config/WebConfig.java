@@ -12,6 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "http://localhost:5173",
                         "http://localhost:5174",
+                        "https://seniornavi-frontend-ncu07xat8-cykimbbs-projects.vercel.app",
                         "http://localhost:8080",
                         "https://api-bytecookie.click")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS"
